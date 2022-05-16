@@ -1,10 +1,10 @@
 version: '3'
 services:
-  www:
-    volumes:
-      - /opt/app/server-data:/opt/app/server-data
+  whiteboard:
+    #volumes:
+    #  - /opt/app/server-data:/opt/app/server-data
     ports:
-      - '80:80'
+      - '8080:80'
     build:
       context: .
     restart: on-failure
