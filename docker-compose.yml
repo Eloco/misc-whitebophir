@@ -4,14 +4,6 @@ services:
     #volumes:
     #  - /opt/app/server-data:/opt/app/server-data
     ports:
-      - '8080:80'
+      - '8080:8080'
     build:
       context: .
-    restart: on-failure
-    deploy:
-      restart_policy:
-        condition: on-failure
-        delay: 5s
-        max_attempts: 5
-        window: 60s
-
